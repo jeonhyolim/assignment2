@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+  <script src="http://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
 <!-- 합쳐지고 최소화된 최신 CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
@@ -15,7 +16,7 @@
   <style>
     body{
       margin:0;
-      background: linear-gradient(yellow, white);
+      background: linear-gradient( white, green);
       height: 950px
     }
     a {
@@ -45,26 +46,34 @@
     #grid #article{
       padding-left:25px;
     }
+    .panel-footer{
+      background: green;
+      color: white;
+      position: fixed;
+      bottom:0;
+      width:75%;
+    }
   </style>
 </head>
 <body>
   <div class="container">
   <h1><a href="index.html">🦁 멋사 8기 웹페이지 🦁</a></h1>
   <div id="grid">
-    <ol>
-      <li><a href="1.html">소개</a></li>
-      <li><a href="2.html">스터디</a></li>
-      <li><a href="3.html">동아리</a></li>
-    </ol>
+    <ul class="nav nav-pills">
+      <li role="presentation" ><a href="1.html">자기소개</a></li>
+      <li role="presentation"><a href="2.html">2020수강과목</a></li>
+      <li role="presentation"class="active"><a href="3.html">동아리</a></li>
+    </ul>
     <div id="article">
         <h2>동아리</h2>
         <p font-family: "바탕체">
           2019 1학기/2학기 중앙동아리 AIESEC 멤버<p></p>
           2020.02~ AIESEC 운영진 <p></p>
-          2020.04~ 멋사 8기 멤버
+          2020.04~ 중앙동아리 멋사 8기 멤버
         </p>
       </div>
   </div>
-</div>
-  </body>
-  </html>
+  <div class="panel-footer" align="center"> made by 전효림 <br> 멋쟁이 사자처럼 8기 멤버</div>
+  </div>
+</body>
+</html>
