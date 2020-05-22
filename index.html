@@ -60,6 +60,7 @@
   </style>
 </head>
 <body>
+
   <div class="container">
   <h1><a href="index.html"> 🦁 멋사 8기 웹페이지 🦁</a></h1>
   <div id="grid">
@@ -67,14 +68,40 @@
       <li role="presentation"><a href="1.html">자기소개</a></li>
       <li role="presentation"><a href="2.html">2020수강과목</a></li>
       <li role="presentation"><a href="3.html">동아리</a></li>
-      <li role="presentation"><a href="file:///C:/Users/전효림/Desktop/멋사/quiz/1.%20bingo.html">BINGO</a></li>
+      <li role="presentation"><a href="bingo.html">BINGO</a></li>
     </ul>
     <div id="article">
         <h2>나만의 웹페이지</h2>
         <p>
-          <h1>웹페이지 <small>index.html</small></h1>
-          <h2>성균관대학교 <small>멋사 8기</small></h2>
-          <h3>멤버 <small>전효림</small></h3>
+          <h3><a href="index.html">웹페이지</a></h3>
+          <input id="night_day" type="button" value="night" onclick="
+            var target = document.querySelector('body');
+            if(this.value === 'night'){
+              target.style.backgroundColor = 'black';
+              target.style.color = 'yellow';
+              this.value = 'day';
+        
+              var alist = document.querySelectorAll('a');
+              var i = 0;
+              while(i < alist.length){
+                alist[i].style.color = 'yellow';
+                i = i + 1;
+              }
+            } else {
+              target.style.backgroundColor = 'white';
+              target.style.color = 'black';
+              this.value = 'night';
+        
+              var alist = document.querySelectorAll('a');
+              var i = 0;
+              while(i < alist.length){
+                alist[i].style.color = 'black';
+                i = i + 1;
+              }
+            }
+          ">
+          <h4>성균관대학교 <small>멋사 8기</small></h4>
+          <h5>멤버 <small>전효림</small></h5>
           1. 자기소개<P></P>
           2. 이번 학기 수강 강좌<p></p>
           3. 동아리<p></p>
